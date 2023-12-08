@@ -47,6 +47,11 @@ pnpm prisma:migrate:dev
 pnpm dev
 ```
 
+If you are getting errors in running the dev command, run the build command, otherwise you can skip it.
+```sh
+pnpm build
+```
+
 If everything went well, the frontend should be running on `http://localhost:5173` and the backend api should be accessible through `http://localhost:3000`. There is a proxy present to also route all requests to `http://localhost:5173/api` directly to the API. If you need to change the `PORT` environment variable for the server, please make sure to update the `apps/client/proxy.conf.json` file as well with the new endpoint.
 
 You can also visit `http://localhost:3000/api/health`, the health check endpoint of the server to check if the server is running correctly, and it is able to connect to all it's dependent services. The output of the health check endpoint should look like this:
@@ -83,5 +88,3 @@ git commit -m "fix(homepage): fix typo on homepage in the faq section"
 ```
 
 It helps to be as decriptive as possible in commit messages so that users can be aware of the changes made by you.
-
-Finally, create a pull request to merge the changes on your forked repository to the original repository hosted on AmruthPillai/Reactive-Resume. I can take a look at the changes you've made when I have the time and have it merged onto the app.

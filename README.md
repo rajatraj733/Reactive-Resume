@@ -8,7 +8,7 @@
 
 # Reactive Resume
 
-A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume.
+Empowering your Career Journey with a Free Resume Builder - Effortless Creation, Seamless Updates, and Instant Sharing
 
 ### [Go to App](https://rxresu.me/) | [Docs](https://docs.rxresu.me/)
 
