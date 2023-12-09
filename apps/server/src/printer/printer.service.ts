@@ -101,7 +101,7 @@ export class PrinterService {
       const browser = await this.getBrowser();
       const page = await browser.newPage();
 
-      let url = this.utils.getUrl();
+      let url = this.utils.getArtboardUrl();
       const publicUrl = this.configService.getOrThrow<string>("PUBLIC_URL");
       const storageUrl = this.configService.getOrThrow<string>("STORAGE_URL");
 
@@ -212,7 +212,7 @@ export class PrinterService {
     const browser = await this.getBrowser();
     const page = await browser.newPage();
 
-    let url = this.utils.getUrl();
+    let url = this.utils.getArtboardUrl();
     const publicUrl = this.configService.getOrThrow<string>("PUBLIC_URL");
     const storageUrl = this.configService.getOrThrow<string>("STORAGE_URL");
 

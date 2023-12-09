@@ -30,6 +30,10 @@ export class UtilsService {
     return url;
   }
 
+  getArtboardUrl(): string {
+    return this.configService.get("ARTBOARD_URL") || (this.getUrl());
+  }
+
   async getCachedOrSet<T>(
     key: string,
     callback: () => Promise<T> | T,

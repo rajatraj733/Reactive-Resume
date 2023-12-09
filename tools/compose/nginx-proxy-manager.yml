@@ -29,6 +29,7 @@ services:
       - minio_data:/data
     environment:
       MINIO_ROOT_USER: minioadmin
+      MINIO_CONSOLE_ADDRESS: :9001
       MINIO_ROOT_PASSWORD: minioadmin
     labels:
       - traefik.enable=true
@@ -54,8 +55,8 @@ services:
     volumes:
       - redis_data:/data
 
-  app:
-    image: amruthpillai/reactive-resume:latest
+  resumeapp:
+    image: almabetter/betterresume:1.0
     restart: unless-stopped
     depends_on:
       - postgres
@@ -68,12 +69,14 @@ services:
       NODE_ENV: production
 
       # -- URLs --
-      PUBLIC_URL: https://example.com
-      STORAGE_URL: https://storage.example.com
+      PUBLIC_URL: http://resume_app
+      STORAGE_URL: http://minioserver/default
+      ARTBOARD_URL: http://resumeapp:3001
 
       # -- Printer (Chrome) --
       CHROME_TOKEN: chrome_token
-      CHROME_URL: wss://printer.example.com
+      # todo - change this url
+      CHROME_URL: ws://chrome:3000
 
       # -- Database (Postgres) --
       DATABASE_URL: postgresql://postgres:postgres@postgres:5432/postgres
@@ -110,14 +113,14 @@ services:
       # VITE_DISABLE_SIGNUPS: true
 
       # -- GitHub (Optional) --
-      GITHUB_CLIENT_ID: github_client_id
-      GITHUB_CLIENT_SECRET: github_client_secret
-      GITHUB_CALLBACK_URL: https://example.com/api/auth/github/callback
+#      GITHUB_CLIENT_ID: github_client_id
+#      GITHUB_CLIENT_SECRET: github_client_secret
+#      GITHUB_CALLBACK_URL: https://example.com/api/auth/github/callback
 
       # -- Google (Optional) --
-      GOOGLE_CLIENT_ID: google_client_id
-      GOOGLE_CLIENT_SECRET: google_client_secret
-      GOOGLE_CALLBACK_URL: https://example.com/api/auth/google/callback
+#      GOOGLE_CLIENT_ID: google_client_id
+#      GOOGLE_CLIENT_SECRET: google_client_secret
+#      GOOGLE_CALLBACK_URL: https://example.com/api/auth/google/callback
 
   nginx:
     image: jc21/nginx-proxy-manager

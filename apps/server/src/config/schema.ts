@@ -12,6 +12,7 @@ export const configSchema = z.object({
   // URLs
   PUBLIC_URL: z.string().url(),
   STORAGE_URL: z.string().url(),
+  ARTBOARD_URL: z.string().url().optional(),
 
   // Database (Prisma)
   DATABASE_URL: z.string().url().startsWith("postgresql://"),
