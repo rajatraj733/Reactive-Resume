@@ -6,7 +6,7 @@
     --border: var(--zinc-200);
 
     /* Primary */
-    --primary: var(--zinc-900);
+    --primary: var(--red-300);
     --primary-accent: var(--zinc-800);
     --primary-foreground: var(--zinc-50);
 
@@ -42,7 +42,7 @@
     --border: var(--zinc-800);
 
     /* Primary */
-    --primary: var(--zinc-100);
+    --primary: var(--red-300);
     --primary-accent: var(--zinc-200);
     --primary-foreground: var(--zinc-950);
 

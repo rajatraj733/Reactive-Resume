@@ -179,7 +179,7 @@ export const AccountSettings = () => {
               <FormItem>
                 <FormLabel>{t`Email`}</FormLabel>
                 <FormControl>
-                  <Input type="email" {...field} />
+                  <Input  type="email" {...field} disabled={true} />
                 </FormControl>
                 <FormDescription
                   className={cn(

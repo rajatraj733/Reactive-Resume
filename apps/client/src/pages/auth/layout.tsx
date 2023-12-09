@@ -27,7 +27,7 @@ export const AuthLayout = () => {
       <div className="relative flex w-full flex-col gap-y-8 justify-center -mt-12 px-12 sm:mx-auto sm:basis-[420px] sm:px-0 lg:basis-[480px] lg:px-12">
         <div className="flex items-center justify-between">
           <Link to="/" className="h-24 w-24">
-            <Logo className="-ml-3 mt-5" size={96} />
+            <Logo className="mt-5" size={96} />
           </Link>
 
           <div className="inset-x-0 bottom-0 space-x-2 text-right lg:absolute lg:p-12 lg:text-center">
