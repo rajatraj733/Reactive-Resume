@@ -35,8 +35,8 @@ export const SettingsPage = () => (
           <ProfileSettings />
           <Separator />
           <OpenAISettings />
-          <Separator />
-          <DangerZoneSettings />
+          {/*<Separator />
+          <DangerZoneSettings />*/}
         </div>
       </ScrollArea>
     </div>

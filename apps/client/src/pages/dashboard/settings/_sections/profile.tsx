@@ -87,7 +87,7 @@ export const ProfileSettings = () => {
             )}
           />
 
-          <FormField
+          {/*<FormField
             name="locale"
             control={form.control}
             render={({ field }) => (
@@ -114,7 +114,7 @@ export const ProfileSettings = () => {
               </FormItem>
             )}
           />
-
+*/}
           <div
             className={cn(
               "hidden items-center space-x-2 self-center sm:col-start-2",
